@@ -11,13 +11,13 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
-    <p>Loading content from the API2: <b id="name">...</b></p>
+    <p>Loading content from the API: <b id="name">...</b></p>
     </main>
 
     <script>
     (async function() {
-        document.querySelector('#name').textContent = "calling api message";
-        const { text } = await( await fetch(`/api/message`)).json();
+      document.querySelector('#name').textContent = "text";
+        const { text } = await fetch('/api/message') ;
         document.querySelector('#name').textContent = text;
     }())
     </script>
