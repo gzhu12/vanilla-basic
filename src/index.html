@@ -16,6 +16,7 @@
 
     <script>
     (async function() {
+        document.querySelector('#name').textContent = "calling api message";
         const { text } = await( await fetch(`/api/message`)).json();
         document.querySelector('#name').textContent = text;
     }())
